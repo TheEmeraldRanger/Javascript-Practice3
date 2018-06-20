@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Javascript Functions</title>
+    </head>
+    <body>
+        <h1>This oughta work </h1>
+        <script>
+            var x,y;
+            function add(x,y) {
+                return x + y;
+            }
+            function multiply(x,y) {
+                var z = 0
+                for (var i = 1 ; i<=x ; i++){
+                     z = add(z,y);
+                }
+                return z
+            }
+            function power(x,y) {
+                var a = 1
+                for (var i = 1 ; i<= y ; i++){
+                    a = multiply(a,x)
+                }
+                return a
+            }
+            function factorial(x){
+                var a = 1
+                for (var i = x ; i>=1 ; i--){
+                    a = multiply(a,i);
+                }
+                return a
+            }
+            function fibonacci(x){
+                if(x === 0){
+                    return 0
+                }
+                if(x === 1){
+                    return 1
+                }
+                else {
+                    return add(fibonacci(x-1),fibonacci(x-2))
+                }
+            }
+        </script>
+    </body>
+</html>
